@@ -28,7 +28,7 @@ steps:
 images: # Display the image in the build results - Build Artifacts
   - $_SERVICE_IMAGE
 
-serviceAccount: my-service-account@managment-427608.iam.gserviceaccount.com
+serviceAccount: 929374002941@cloudbuild.gserviceaccount.com #my-service-account@managment-427608.iam.gserviceaccount.com
 options:
   defaultLogsBucketBehavior: REGIONAL_USER_OWNED_BUCKET
 
