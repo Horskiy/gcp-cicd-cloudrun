@@ -30,7 +30,7 @@ images: # Display the image in the build results - Build Artifacts
 
 serviceAccount: my-service-account@managment-427608.iam.gserviceaccount.com
 options:
-  defaultLogsBucketBehavior: CLOUD_LOGGING_ONLY #REGIONAL_USER_OWNED_BUCKET
+  defaultLogsBucketBehavior: REGIONAL_USER_OWNED_BUCKET
 
 substitutions:
   _SERVICE_IMAGE: europe-central2-docker.pkg.dev/${PROJECT_ID}/${_DOCKER_REGISTRY}/${_DOCKER_IMAGENAME}:${SHORT_SHA}
