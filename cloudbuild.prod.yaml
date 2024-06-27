@@ -3,6 +3,15 @@
 # CloudBuild Pipeline for Prod CloudRun
 #-----------------------------------------
 steps:
+  # Update gcloud components
+  - name: gcr.io/cloud-builders/gcloud
+    entrypoint: "bash"
+    args:
+      - "-c"
+      - |
+        echo "Updating gcloud components..."
+        gcloud components update
+
   - name: "ubuntu"
     entrypoint: "bash"
     args:
