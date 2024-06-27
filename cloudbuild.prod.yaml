@@ -3,6 +3,17 @@
 # CloudBuild Pipeline for Prod CloudRun
 #-----------------------------------------
 steps:
+  - name: "ubuntu"
+    entrypoint: "bash"
+    args:
+      - "-c"
+      - |
+        echo "SERVICE_IMAGE: $_SERVICE_IMAGE"
+        echo "SERVICE_REGION: $_SERVICE_REGION"
+        echo "SERVICE_PROJECT: $_SERVICE_PROJECT"
+        echo "SERVICE_NAME: $_SERVICE_NAME"
+        echo "DOCKER_REGISTRY: $_DOCKER_REGISTRY"
+        echo "DOCKER_IMAGENAME: $_DOCKER_IMAGENAME"
   # Docker Build Image
   - name: gcr.io/cloud-builders/docker
     id: BUILD
